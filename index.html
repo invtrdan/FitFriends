@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Workout and Meal Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js"></script>
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <h1>Social Workout and Meal Tracker</h1>
+
+  <!-- Authentication Section -->
+  <div id="auth-container">
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button id="login-btn">Login</button>
+    <button id="signup-btn">Sign Up</button>
+  </div>
+
+  <!-- Tracker Section -->
+  <div id="tracker-container" style="display:none;">
+    <h2>Profile</h2>
+    <div id="profile-info">
+      <input type="text" id="username" placeholder="Username">
+      <input type="text" id="bio" placeholder="Bio">
+      <button id="save-profile-btn">Save Profile</button>
+    </div>
+    <h2>Your Workouts</h2>
+    <form id="workout-form">
+      <input type="text" id="workout-name" placeholder="Workout Name">
+      <input type="text" id="workout-description" placeholder="Workout Description">
+      <button type="submit">Add Workout</button>
+    </form>
+    <ul id="workout-list"></ul>
+
+    <h2>Your Meal Plans</h2>
+    <form id="meal-form">
+      <input type="text" id="meal-name" placeholder="Meal Name">
+      <input type="text" id="meal-description" placeholder="Meal Description">
+      <button type="submit">Add Meal</button>
+    </form>
+    <ul id="meal-list"></ul>
+
+    <button id="logout-btn">Logout</button>
+  </div>
+
+  <!-- Feed Section -->
+  <div id="feed-container" style="display:none;">
+    <h2>Feed</h2>
+    <ul id="feed-list"></ul>
+  </div>
+
+  <!-- Friends Section -->
+  <div id="friends-container" style="display:none;">
+    <h2>Find Friends</h2>
+    <ul id="users-list"></ul>
+  </div>
+</body>
+
+</html>
